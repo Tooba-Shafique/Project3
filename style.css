@@ -1,0 +1,308 @@
+* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.fitness {
+    font-weight: bold; 
+    font-size: 20px;
+    margin-right: 50px;
+}
+.tooba {
+    color: #e0d1cd; /* Color for Tooba's */
+    margin-top: 100px;
+}
+.fitness-text {
+    color: #33C4FF; /* Color for Fitness */
+    font-size: 20px;
+    
+}
+/* html{
+    scroll-behavior: smooth; */
+nav img{
+    border: 2px solid rgb(26, 24, 24);
+    border-radius: 40px;
+   
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+#home {
+    /* Ensure that the padding does not cause overflow */
+    padding: 3px 200px;
+    width: 100%;
+    /* Consider using max-width if you want to limit the width */
+    max-width: 1200px; /* Example value */
+    margin: 0 auto; /* Center the element */
+}
+#services .box {
+    /* Ensure that the box fits within the viewport */
+    width: 100%;
+    max-width: 300px; /* Example value */
+}
+#services {
+    margin: 34px;
+    /* Ensure that the flex container does not overflow */
+    width: 100%;
+    max-width: 1200px; /* Example value */
+    margin: 0 auto; /* Center the element */
+}
+#home::before {
+    /* Ensure that the background image does not extend beyond the viewport */
+    background-size: cover;
+    background-position: center center;
+}
+#contact-box form {
+    width: 40%;
+    /* Ensure that the form fits within the viewport */
+    max-width: 600px; /* Example value */
+}
+/* CSS Variables */
+.navbar {
+    z-index: 1000; 
+}
+:root{
+    --navbar-height: 59px;
+}
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+   
+}
+#navbar::before{
+    content: "";
+    background-color: rgb(14, 8, 8);
+    background: 2px solid black;
+    border-radius: 70px;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+    
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#Home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px; 
+}
+#Home::before{ 
+    content: "";
+    position: absolute;
+    background: url('Images/img1.jpg') no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+#Home h4{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+    font-size: 38px; 
+    margin-top: 130px;
+}
+#Home p{
+    color:white;
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+    margin-top: 0px;
+    
+}
+
+/* Services Section */
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #d5c1c1;
+    margin-bottom: 20px;
+}
+#services .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+
+/* Clients Section */
+#client-section {
+    position: relative;
+    width: 100%; /* Ensure the client section takes the full width */
+    padding: 20px 0;
+}
+
+#client-section::before {
+    content: "";
+    position: absolute;
+    background: url('Images/main.jpg');
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#Clients {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%; /* Ensure the flex container takes the full width */
+    overflow: auto;
+}
+
+.client-item {
+    margin: 0 10px;
+}
+
+#Clients img {
+    height: 120px; /* Fixed height */
+    width: 120px; /* Fixed width */
+    margin: 15px;
+    border: 2px solid white;
+    border-radius: 30px;
+    display: block; /* Remove flex display if not needed */
+    object-fit: contain; /* Ensure the image fits within the fixed dimensions */
+}
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('Images/main.jpg') no-repeat center center/cover;
+}
+#contact h1{
+    color:rgb(15, 4, 4);
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+    font-size: 40px;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.5rem;
+    padding: 5px;
+    
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.1rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 5px 70px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 130px auto;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+#message input[type="text"] {
+    height: 100px; 
+}
