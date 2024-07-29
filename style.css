@@ -12,11 +12,13 @@
 .tooba {
     color: #e0d1cd; /* Color for Tooba's */
     margin-top: 100px;
+    text-decoration: none;
 }
-.fitness-text {
-    color: #e00c0c; /* Color for Fitness */
+.fitness-link {
+    color: #c20b0b; /* Color for Fitness */
     font-size: 40px;
-    
+    text-decoration: none;
+     
 }
 /* html{
     scroll-behavior: smooth; */
@@ -182,9 +184,10 @@ img {
 
 /* Clients Section */
 #client-section {
-    position: relative;
-    width: 100%; /* Ensure the client section takes the full width */
-    padding: 20px 0;
+    margin: 34px; /* Match the margin of the services section */
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center;
 }
 
 #client-section::before {
@@ -193,7 +196,7 @@ img {
     background: url('Images/main.jpg');
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -1; /* Adjusted z-index to ensure it's behind the content */
     opacity: 0.3;
 }
 
@@ -217,54 +220,70 @@ img {
     margin: 15px;
     border: 2px solid white;
     border-radius: 30px;
-    display: block; /* Remove flex display if not needed */
-    object-fit: contain; /* Ensure the image fits within the fixed dimensions */
 }
 
 /* Contact Section */
-#contact{
-    position: relative;
+#contact {
+    margin: 34px; /* Match the margin of the client section */
+    display: flex;
+    flex-direction: column; /* Adjusted to column for better alignment */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensure the contact section takes the full width */
 }
-#contact::before{
+
+#contact::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: -1; /* Adjusted z-index to ensure it's behind the content */
     opacity: 0.7;
     background: url('Images/main.jpg') no-repeat center center/cover;
 }
-#contact h1{
-    color:rgb(15, 4, 4);
+
+#contact h1 {
+    color: rgb(15, 4, 4);
     text-align: center;
     font-family: 'Bree Serif', serif;
-    text-align: center;
     font-size: 40px;
+    margin-bottom: 20px; /* Add some margin for better spacing */
 }
-#contact-box{
+
+#contact-box {
     display: flex;
+    flex-direction: column; /* Adjusted to column for better alignment */
     justify-content: center;
     align-items: center;
     padding-bottom: 34px;
+    width: 100%; /* Ensure the flex container takes the full width */
 }
-#contact-box input, 
-#contact-box textarea{
+
+#contact-box input,
+#contact-box textarea {
     width: 100%;
     padding: 0.5rem;
     border-radius: 9px;
     font-size: 1.1rem;
-} 
-
-#contact-box form{
-    width: 40%;
+    margin-bottom: 10px; /* Add some margin for better spacing */
 }
 
-#contact-box label{
-   font-size: 1.3rem;
-   font-family: 'Bree Serif', serif;
-
+#contact-box form {
+    width: 40%; /* Adjusted width */
+    margin-bottom: 20px; /* Add some margin for better spacing */
 }
 
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+    margin-bottom: 5px; /* Add some margin for better spacing */
+}
+
+@media (max-width: 768px) {
+    #contact-box form {
+        width: 100%; /* Make the form full-width on smaller screens */
+    }
+}
 
 footer{
     background: black;
